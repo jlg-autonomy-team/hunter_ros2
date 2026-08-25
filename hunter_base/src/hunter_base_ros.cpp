@@ -92,10 +92,10 @@ void HunterBaseRos::Run() {
 
     if(robot_model_=="hunter_se")
     {
-      messenger->SetTrack(HunterV1Params::track);
-      messenger->SetWeelbase(HunterV1Params::wheelbase);
-      messenger->SetMaxSteerAngleCentral(HunterV1Params::max_steer_angle_central);
-      messenger->SetMaxSteerAngle(HunterV1Params::max_steer_angle);
+      messenger->SetTrack(HunterSEParams::track);
+      messenger->SetWeelbase(HunterSEParams::wheelbase);
+      messenger->SetMaxSteerAngleCentral(HunterSEParams::max_steer_angle_central);
+      messenger->SetMaxSteerAngle(HunterSEParams::max_steer_angle);
       
     }
     else if (robot_model_=="hunter2")
