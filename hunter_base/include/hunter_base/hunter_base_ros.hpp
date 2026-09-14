@@ -32,6 +32,7 @@ class HunterBaseRos : public rclcpp::Node {
   std::string odom_frame_;
   std::string base_frame_;
   std::string odom_topic_name_;
+  bool enable_odom_tf_ = true;
 
   bool is_hunter_mini_ = false;
   bool is_omni_wheel_ = false;
