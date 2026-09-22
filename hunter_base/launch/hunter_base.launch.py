@@ -33,6 +33,9 @@ def generate_launch_description():
         default_value="true",
         description="Publish the odom to base frame transform",
     )
+    robot_model_arg = DeclareLaunchArgument(
+        "robot_model", default_value="hunter2", description="robot_model"
+    )
 
     simulated_robot_arg = DeclareLaunchArgument(
         "simulated_robot",
@@ -70,6 +73,7 @@ def generate_launch_description():
                 "control_rate": launch.substitutions.LaunchConfiguration(
                     "control_rate"
                 ),
+                "robot_model": launch.substitutions.LaunchConfiguration("robot_model"),
             }
         ],
     )
@@ -84,6 +88,7 @@ def generate_launch_description():
             enable_odom_tf_arg,
             simulated_robot_arg,
             sim_control_rate_arg,
+            robot_model_arg,
             hunter_base_node,
         ]
     )
